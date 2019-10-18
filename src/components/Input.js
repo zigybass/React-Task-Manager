@@ -8,10 +8,10 @@ class Input extends React.Component {
   };
 
   onChange = (e) => {
-      this.setState({ newTask: e.target.value })
+      this.setState({ [e.target.name]: e.target.value })
   }
 
-  submit (e) {
+  onSubmit = (e) => {
       e.preventDefault();
       console.log("submit test")
   }
@@ -24,6 +24,7 @@ class Input extends React.Component {
             <i className="material-icons prefix">mode_edit</i>
             <input
               placeholder=""
+              name="newTask"
               id="newTask"
               type="text"
               className="validate"
@@ -34,10 +35,10 @@ class Input extends React.Component {
           </div>
           <div className="input-field col s10">
           <i className="material-icons prefix">mode_edit</i>
-          <textarea id="icon_prefix2" value={this.state.details} className="materialize-textarea"></textarea>
+          <textarea id="icon_prefix2" value={this.state.details} name="details" onChange={this.onChange} className="materialize-textarea"></textarea>
           <label for="icon_prefix2">Details</label>
         </div>
-        <button className="btn waves-effect lime accent-2 black-text waves-dark" onSubmit={this.submit} type="submit" name="action">Create
+        <button className="btn waves-effect lime accent-2 black-text waves-dark" onClick={this.onSubmit} type="submit" name="action">Create
     <i className="material-icons right">send</i>
   </button>
         </div>
