@@ -5,27 +5,17 @@ function Header() {
     <div>
       <nav>
         <div className="nav-wrapper blue-grey darken-1">
-          <a href="#!" className="brand-logo">
-            <i className="material-icons">check_circle_outline</i>Task Manager
-          </a>
-          <ul className="right hide-on-med-and-down">
+          <div className="brand-logo topHeader">
+            <i className="material-icons">assignment</i>Task Manager
+          </div>
+          <ul className="right hide-on-med-and-down topHeader">
             <li>
-            <a class="waves-effect amber darken-2 waves-light btn">Login</a>
+              <div className="waves-effect lime accent-2 black-text waves-light btn">
+                Login
+              </div>
             </li>
             <li>
-              <a href="badges.html">
-                <i className="material-icons">view_module</i>
-              </a>
-            </li>
-            <li>
-              <a href="collapsible.html">
-                <i className="material-icons">refresh</i>
-              </a>
-            </li>
-            <li>
-              <a href="mobile.html">
-                <i className="material-icons">more_vert</i>
-              </a>
+              <i className="material-icons">more_vert</i>
             </li>
           </ul>
         </div>
