@@ -13,17 +13,17 @@ class Input extends React.Component {
 
   onSubmit = (e) => {
       e.preventDefault();
-      console.log("submit test")
+      this.setState({ newTask: "", details: ""})
   }
 
   render() {
     return (
-      <div className="container">
+      <div className="container inputCont">
         <div className="row">
           <div className="input-field col s10">
             <i className="material-icons prefix">mode_edit</i>
             <input
-              placeholder=""
+              
               name="newTask"
               id="newTask"
               type="text"

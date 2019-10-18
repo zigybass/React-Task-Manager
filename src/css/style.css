@@ -1,3 +1,7 @@
+body {
+    font-family: 'Cabin', sans-serif;
+}
+
 .page-footer {
     position: fixed;
     bottom: 0;
@@ -9,5 +13,9 @@
 }
 
 .appCont {
-    margin-top: 80px;
+    margin-top: 60px;
+}
+
+.inputCont {
+    margin-top: 40px;
 }
