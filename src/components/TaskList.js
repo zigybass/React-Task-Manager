@@ -1,20 +1,28 @@
 import React from "react";
 
 class TaskList extends React.Component {
-    
+
   state = {
     tasks: []
   };
 
+  componentDidMount = () => {
+      this.setState({ tasks: this.props.tasks})
+      console.log("tasklist: " + this.props.tasks)
+  }
+
+  addToDo = (e) => {
+      console.log("add todo")
+  }
+
   render() {
+
     return (
-      <div className="container">
-        <h4 style={{ textAlign: "center" }}>Tasks List</h4>
-        <ul className="collection">
-          <li className="collection-item"></li>
-          <li className="collection-item"></li>
-          <li className="collection-item"></li>
-          <li className="collection-item"></li>
+
+      <div className="container listCont">
+        <h4 style={{ textAlign: "center" }}>Task List</h4>
+        <ul className="collection taskList">
+            
         </ul>
       </div>
     );

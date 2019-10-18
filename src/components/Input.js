@@ -1,5 +1,6 @@
 import React from "react";
 
+
 class Input extends React.Component {
 
   state = {
@@ -13,6 +14,11 @@ class Input extends React.Component {
 
   onSubmit = (e) => {
       e.preventDefault();
+      const newTask = {
+          title: this.state.newTask,
+          details: this.state.details
+      }
+      this.props.addtodo(newTask)
       this.setState({ newTask: "", details: ""})
   }
 
@@ -23,15 +29,14 @@ class Input extends React.Component {
           <div className="input-field col s10">
             <i className="material-icons prefix">mode_edit</i>
             <input
-              
               name="newTask"
               id="newTask"
               type="text"
-              className="validate"
+              className="taskTitle"
               onChange={this.onChange.bind(this)}
               value={this.state.newTask}
             />
-            <label for="first_name">Add New Task</label>
+            <label>Add New Task</label>
           </div>
           <div className="input-field col s10">
           <i className="material-icons prefix">mode_edit</i>

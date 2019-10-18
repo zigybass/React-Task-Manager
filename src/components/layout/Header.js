@@ -10,7 +10,7 @@ function Header() {
           </div>
           <ul className="right hide-on-med-and-down topHeader">
             <li>
-              <div className="waves-effect lime accent-2 black-text waves-light btn">
+              <div className="waves-effect lime accent-2 black-text waves-dark btn">
                 Login
               </div>
             </li>

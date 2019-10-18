@@ -19,3 +19,8 @@ body {
 .inputCont {
     margin-top: 40px;
 }
+
+.listCont {
+    background: #546e7a;
+    color: #ffffff;
+}

@@ -9,7 +9,15 @@ import TaskList from "./components/TaskList";
 class App extends React.Component {
 
   state = {
+    tasks: []
+  }
 
+  componentDidMount = () => {
+  }
+
+  addToDo = (task) => {
+    console.log(task)
+    this.setState({ tasks: [...this.state.tasks, task]})
   }
 
   render() {
@@ -20,9 +28,8 @@ class App extends React.Component {
     <Header />
     <div className="container appCont">
       <h3>Welcome to Task Manager</h3>
-      <Input />
-      <br/>
-      <TaskList />
+      <Input addtodo={this.addToDo}/>
+      <TaskList tasks={this.state.tasks} />
     </div>
     </ Router>
     
