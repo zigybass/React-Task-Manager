@@ -7,7 +7,8 @@ class Input extends React.Component {
       details: ""
   };
 
-  onChange (v) {
+  onChange = (e) => {
+      this.setState({ newTask: e.target.value })
   }
 
   submit (e) {
@@ -26,14 +27,14 @@ class Input extends React.Component {
               id="newTask"
               type="text"
               className="validate"
-              onChange={this.onChange.bind(this, this.state.newTask)}
+              onChange={this.onChange.bind(this)}
               value={this.state.newTask}
             />
             <label for="first_name">Add New Task</label>
           </div>
           <div className="input-field col s10">
           <i className="material-icons prefix">mode_edit</i>
-          <textarea id="icon_prefix2" className="materialize-textarea"></textarea>
+          <textarea id="icon_prefix2" value={this.state.details} className="materialize-textarea"></textarea>
           <label for="icon_prefix2">Details</label>
         </div>
         <button className="btn waves-effect lime accent-2 black-text waves-dark" onSubmit={this.submit} type="submit" name="action">Create
