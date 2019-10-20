@@ -3,12 +3,12 @@ import React from "react";
 class TaskList extends React.Component {
 
   state = {
-    tasks: []
+    tasks: "taskslist"
   };
 
   componentDidMount = () => {
       this.setState({ tasks: this.props.tasks})
-      console.log("tasklist: " + this.props.tasks)
+      console.log("tasklist: " + this.state.tasks)
   }
 
   addToDo = (e) => {

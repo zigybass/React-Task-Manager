@@ -33,7 +33,7 @@ class Input extends React.Component {
               id="newTask"
               type="text"
               className="taskTitle"
-              onChange={this.onChange.bind(this)}
+              onChange={this.onChange}
               value={this.state.newTask}
             />
             <label>Add New Task</label>

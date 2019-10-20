@@ -17,7 +17,13 @@ class App extends React.Component {
 
   addToDo = (task) => {
     console.log(task)
-    this.setState({ tasks: [...this.state.tasks, task]})
+    const newTodo = {
+      id: 1,
+      newTask: task.title,
+      details: task.details
+    }
+    this.setState({ tasks: [...this.state.tasks, newTodo]})
+    console.log(this.state.tasks)
   }
 
   render() {
