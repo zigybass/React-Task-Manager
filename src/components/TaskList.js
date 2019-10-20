@@ -8,18 +8,19 @@ class TaskList extends React.Component {
   }
 
     render () {
+
       return (
       <div>
         <h4 style={{ textAlign: "center" }}>Task List</h4>
+        <Collapsible accordion={false}>
           {this.props.tasks.map(task => {
             return (
-              <Collapsible key={task.key} accordion={false}>
-              <CollapsibleItem header={task.newTask}>
+              <CollapsibleItem id={task.key} key={task.key} header={task.newTask}>
                 {task.details}
               </CollapsibleItem>
-              </Collapsible>
             );
           })}
+          </Collapsible>
       </div>
     );
    }
