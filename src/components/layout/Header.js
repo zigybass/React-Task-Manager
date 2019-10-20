@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -10,9 +11,9 @@ function Header() {
           </div>
           <ul className="right hide-on-med-and-down topHeader">
             <li>
-              <div className="waves-effect lime accent-2 black-text waves-dark btn">
+              <Link to="/login" className="waves-effect lime accent-2 black-text waves-dark btn">
                 Login
-              </div>
+              </Link>
             </li>
             <li>
               <i className="material-icons">more_vert</i>

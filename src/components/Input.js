@@ -29,6 +29,7 @@ class Input extends React.Component {
           <div className="input-field col s10">
             <i className="material-icons prefix">mode_edit</i>
             <input
+            placeholder="Add New Task"
               name="newTask"
               id="newTask"
               type="text"
@@ -36,7 +37,7 @@ class Input extends React.Component {
               onChange={this.onChange}
               value={this.state.newTask}
             />
-            <label>Add New Task</label>
+            <label></label>
           </div>
           <div className="input-field col s10">
           <i className="material-icons prefix">mode_edit</i>
