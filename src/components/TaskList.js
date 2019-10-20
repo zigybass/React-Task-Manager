@@ -1,21 +1,32 @@
 import React from "react";
 
-const TaskList = (props) => {
+class TaskList extends React.Component {
 
-  console.log(props.tasks)
-   
-    return (
+  onDelete = () => {
+
+  }
+
+    render () {
+      return (
       <div className="container white-text blue-grey darken-1">
         <h4 style={{ textAlign: "center" }}>Task List</h4>
-        <ul className="collection">
-          {props.tasks.map(task => {
+        <ul className="collapsible popout">
+          {this.props.tasks.map(task => {
             return (
-            <li key={task.key} className="collection-item white-text blue-grey darken-1 taskItem">{task.newTask}</li>
+            <li key={task.key} className="white-text blue-grey darken-1 taskItem">
+              <div className="collapsible-header blue-grey darken-1">
+                {task.newTask}
+              </div>
+              <div className="collapsible-body">
+                {task.details}
+              </div>
+            </li>
             );
           })}
         </ul>
       </div>
     );
+   }
 }
 
 export default TaskList;

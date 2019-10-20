@@ -23,3 +23,8 @@ body {
 .loginCont {
     margin-top: 60px;
 }
+
+.delBtn {
+    float: right;
+    color: white;
+}
