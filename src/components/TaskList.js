@@ -1,5 +1,5 @@
 import React from "react";
-import { Collapsible, CollapsibleItem, Icon } from "react-materialize";
+import { Collapsible, CollapsibleItem } from "react-materialize";
 
 class TaskList extends React.Component {
 
@@ -9,9 +9,8 @@ class TaskList extends React.Component {
 
     render () {
       return (
-      <div className="container white-text blue-grey darken-1">
+      <div>
         <h4 style={{ textAlign: "center" }}>Task List</h4>
-        <ul className="collapsible expandable">
           {this.props.tasks.map(task => {
             return (
               <Collapsible key={task.key} accordion={false}>
@@ -21,7 +20,6 @@ class TaskList extends React.Component {
               </Collapsible>
             );
           })}
-        </ul>
       </div>
     );
    }
