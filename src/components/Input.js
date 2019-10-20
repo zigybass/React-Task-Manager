@@ -1,26 +1,24 @@
-import React from "react";
-
+import React from "react";  
 
 class Input extends React.Component {
-
   state = {
-      newTask: "",
-      details: ""
+    newTask: "",
+    details: ""
   };
 
-  onChange = (e) => {
-      this.setState({ [e.target.name]: e.target.value })
-  }
+  onChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
-  onSubmit = (e) => {
-      e.preventDefault();
-      const newTask = {
-          title: this.state.newTask,
-          details: this.state.details
-      }
-      this.props.addtodo(newTask)
-      this.setState({ newTask: "", details: ""})
-  }
+  onSubmit = e => {
+    e.preventDefault();
+    const newTask = {
+      title: this.state.newTask,
+      details: this.state.details
+    };
+    this.props.addtodo(newTask);
+    this.setState({ newTask: "", details: "" });
+  };
 
   render() {
     return (
@@ -29,7 +27,7 @@ class Input extends React.Component {
           <div className="input-field col s10">
             <i className="material-icons prefix">mode_edit</i>
             <input
-            placeholder="Add New Task"
+              placeholder="Add New Task"
               name="newTask"
               id="newTask"
               type="text"
@@ -40,13 +38,25 @@ class Input extends React.Component {
             <label></label>
           </div>
           <div className="input-field col s10">
-          <i className="material-icons prefix">mode_edit</i>
-          <textarea id="icon_prefix2" value={this.state.details} name="details" onChange={this.onChange} className="materialize-textarea"></textarea>
-          <label for="icon_prefix2">Details</label>
-        </div>
-        <button className="btn waves-effect lime accent-2 black-text waves-dark" onClick={this.onSubmit} type="submit" name="action">Create
-    <i className="material-icons right">send</i>
-  </button>
+            <i className="material-icons prefix">mode_edit</i>
+            <textarea
+              id="icon_prefix2"
+              value={this.state.details}
+              name="details"
+              onChange={this.onChange}
+              className="materialize-textarea"
+            ></textarea>
+            <label for="icon_prefix2">Details</label>
+          </div>
+          <button
+            className="btn waves-effect lime accent-2 black-text waves-dark"
+            onClick={this.onSubmit}
+            type="submit"
+            name="action"
+          >
+            Create
+            <i className="material-icons right">send</i>
+          </button>
         </div>
       </div>
     );

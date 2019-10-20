@@ -28,3 +28,7 @@ body {
 .loginCont {
     margin-top: 60px;
 }
+
+.taskItem {
+    background: #546e7a;
+}

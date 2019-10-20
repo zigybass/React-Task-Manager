@@ -5,7 +5,9 @@ import Header from "./components/layout/Header";
 // import Footer from "./components/layout/Footer";
 import Input from "./components/Input";
 import TaskList from "./components/TaskList";
-import Login from "./components/pages/Login"
+import Login from "./components/pages/Login";
+import uuid from "uuid";
+import Splash from "./components/pages/Splash";
 
 class App extends React.Component {
 
@@ -19,11 +21,11 @@ class App extends React.Component {
   addToDo = (task) => {
     console.log(task)
     const newTodo = {
-      id: 1,
+      id: uuid.v4(),
       newTask: task.title,
       details: task.details
     }
-    this.setState({ tasks: [...this.state.tasks, newTodo]})
+    this.setState({ tasks: [newTodo, ...this.state.tasks]})
     console.log(this.state.tasks)
   }
 
@@ -33,6 +35,7 @@ class App extends React.Component {
 
     <Router>
     <Header />
+    <Route exact path="/" component={Splash} />
     <Route path="/tasks" >
     <div className="container appCont">
       <h3>Welcome to Task Manager</h3>
@@ -41,7 +44,6 @@ class App extends React.Component {
     </div>
     </Route>
     <Route path="/login" component={Login} />
-
     </ Router>
     
   )};
