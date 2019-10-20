@@ -44,7 +44,11 @@ class App extends React.Component {
       <TaskList tasks={this.state.tasks} />
     </div>
     </Route>
-    <Route path="/login" component={Login} />
+    <Route path="/login">
+      <div className="container appCont">
+        <Login />
+      </div>
+    </Route>
 
     </ Router>
     

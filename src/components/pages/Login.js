@@ -16,7 +16,7 @@ class Login extends React.Component {
       <div className="container loginCont">
         <h4>Login</h4>
         <div className="row">
-          <div className="input-field col s6">
+          <div className="input-field col s8">
             <input
               name="username"
               placeholder="Username"
@@ -28,7 +28,7 @@ class Login extends React.Component {
             />
             <label for="first_name"></label>
           </div>
-          <div className="input-field col s6">
+          <div className="input-field col s8">
             <input
               name="password"
               placeholder="Password"
@@ -48,7 +48,6 @@ class Login extends React.Component {
             name="action"
           >
             Login
-            <i className="material-icons right">send</i>
           </button>
           </Link>
         </div>

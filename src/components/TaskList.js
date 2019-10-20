@@ -1,26 +1,24 @@
 import React from "react";
+import { Collapsible, CollapsibleItem, Icon } from "react-materialize";
 
 class TaskList extends React.Component {
 
-  onDelete = () => {
-
+  onDelete = (id) => {
+    console.log("hello " + id)
   }
 
     render () {
       return (
       <div className="container white-text blue-grey darken-1">
         <h4 style={{ textAlign: "center" }}>Task List</h4>
-        <ul className="collapsible popout">
+        <ul className="collapsible expandable">
           {this.props.tasks.map(task => {
             return (
-            <li key={task.key} className="white-text blue-grey darken-1 taskItem">
-              <div className="collapsible-header blue-grey darken-1">
-                {task.newTask}
-              </div>
-              <div className="collapsible-body">
+              <Collapsible key={task.key} accordion={false}>
+              <CollapsibleItem header={task.newTask}>
                 {task.details}
-              </div>
-            </li>
+              </CollapsibleItem>
+              </Collapsible>
             );
           })}
         </ul>
