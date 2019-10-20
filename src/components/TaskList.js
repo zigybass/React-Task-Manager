@@ -1,30 +1,21 @@
 import React from "react";
 
-class TaskList extends React.Component {
-  state = {
-    tasks: []
-  };
+const TaskList = (props) => {
 
-  componentDidUpdate = () => {
-    console.log(this.props.tasks)
-  }
-
-  addToDo = e => {
-    console.log("add todo");
-  };
-
-  render() {
+  console.log(props.tasks)
+   
     return (
-      <div className="container listCont">
+      <div className="container white-text blue-grey darken-1">
         <h4 style={{ textAlign: "center" }}>Task List</h4>
         <ul className="collection">
-          {this.props.tasks.map(task => {
-            return <li className="collection-item text-white taskItem">{task.title}</li>;
+          {props.tasks.map(task => {
+            return (
+            <li key={task.key} className="collection-item white-text blue-grey darken-1 taskItem">{task.newTask}</li>
+            );
           })}
         </ul>
       </div>
     );
-  }
 }
 
 export default TaskList;

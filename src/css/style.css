@@ -20,15 +20,6 @@ body {
     margin-top: 40px;
 }
 
-.listCont {
-    background: #546e7a;
-    color: #ffffff;
-}
-
 .loginCont {
     margin-top: 60px;
-}
-
-.taskItem {
-    background: #546e7a;
 }

@@ -21,12 +21,11 @@ class App extends React.Component {
   addToDo = (task) => {
     console.log(task)
     const newTodo = {
-      id: uuid.v4(),
+      key: uuid.v4(),
       newTask: task.title,
       details: task.details
     }
     this.setState({ tasks: [newTodo, ...this.state.tasks]})
-    console.log(this.state.tasks)
   }
 
   render() {
@@ -34,6 +33,7 @@ class App extends React.Component {
   return (
 
     <Router>
+
     <Header />
     <Route exact path="/" component={Splash} />
     <Route path="/tasks" >
@@ -44,6 +44,7 @@ class App extends React.Component {
     </div>
     </Route>
     <Route path="/login" component={Login} />
+
     </ Router>
     
   )};
