@@ -29,6 +29,12 @@ class App extends React.Component {
     this.setState({ tasks: [newTodo, ...this.state.tasks]})
   }
 
+  delTask (id) {
+    console.log("del from App " + id)
+    console.log(this.state.tasks)
+    this.setState({ tasks: this.state.tasks.filter( task => task.key !== id)})
+  }
+
   render() {
 
   return (
@@ -41,7 +47,7 @@ class App extends React.Component {
     <div className="container appCont">
       <h3>Welcome to Task Manager</h3>
       <Input addtodo={this.addToDo}/>
-      <TaskList tasks={this.state.tasks} />
+      <TaskList tasks={this.state.tasks} delTask={this.delTask} />
     </div>
     </Route>
     <Route path="/login">
