@@ -60,7 +60,7 @@ body {
 }
 
 .spinner-color-green {
-    animation: rotate .5s ease-out infinite;
+    animation: rotate .24s linear infinite;
     border-top: 15px solid #ecff1f;
 }
 

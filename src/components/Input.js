@@ -26,7 +26,7 @@ class Input extends React.Component {
   resetSpinner = () => {
     setTimeout( () => {
       this.setState({ spinner: false})
-    }, 1000)
+    }, 700)
   }
 
   render() {

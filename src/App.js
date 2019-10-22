@@ -8,7 +8,6 @@ import TaskList from "./components/TaskList";
 import Login from "./components/pages/Login";
 import uuid from "uuid";
 import Splash from "./components/pages/Splash";
-// import Spinner from "./components/layout/Spinner";
 import "./js/code";
 
 class App extends React.Component {

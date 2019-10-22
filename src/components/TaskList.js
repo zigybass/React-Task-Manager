@@ -26,6 +26,7 @@ class TaskList extends React.Component {
 
   componentDidUpdate () {
     if (this.props.tasks !== this.state.tasks) {
+      this.setState({ tasks: this.props.tasks})
       console.log("state: " + this.state.tasks)
       console.log("props: " + this.props.tasks)
     }
