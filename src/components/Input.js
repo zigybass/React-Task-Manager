@@ -3,7 +3,8 @@ import React from "react";
 class Input extends React.Component {
   state = {
     newTask: "",
-    details: ""
+    details: "",
+    spinner: false
   };
 
   onChange = e => {
@@ -12,6 +13,7 @@ class Input extends React.Component {
 
   onSubmit = e => {
     e.preventDefault();
+    this.setState({ spinner: true})
     const newTask = {
       title: this.state.newTask,
       details: this.state.details
@@ -21,6 +23,7 @@ class Input extends React.Component {
   };
 
   render() {
+    let spinClass = this.state.spinner ? "spinnerShow" : "spinner";
     return (
       <div className="container inputCont">
         <div className="row">
@@ -58,10 +61,10 @@ class Input extends React.Component {
             Create
             <i className="material-icons right">send</i>
           </button>
-          <div className="spinner">
+          <div className={spinClass}>
             <div className="spinner-sector spinner-color-grey"></div>
             <div className="spinner-sector spinner-color-green"></div>
-
+            <div className="spinner-sector spinner-color-shade"></div>
         </div>
         </div>
       </div>

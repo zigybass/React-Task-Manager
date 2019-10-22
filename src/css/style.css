@@ -31,7 +31,18 @@ body {
 
 .spinner {
     position: relative;
-    display: flex;
+    display: none;
+    float: right;
+    margin-right: 500px;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+}
+
+.spinnerShow {
+    position: relative;
+    display: unset;
     float: right;
     margin-right: 500px;
     justify-content: center;
@@ -49,12 +60,11 @@ body {
 }
 
 .spinner-color-green {
-    animation: rotate .35s ease-out infinite;
-    border-top: 15px solid #ecff1f;
+    animation: rotate .5s ease-out infinite;
+    border-top: 14px solid #ecff1f;
 }
 
 .spinner-color-grey {
-    animation: rotate .4s linear infinite;
     border: 15px solid #546e7a;
 }
 
