@@ -13,7 +13,8 @@ class Input extends React.Component {
 
   onSubmit = e => {
     e.preventDefault();
-    this.setState({ spinner: true})
+    this.setState({ spinner: true })
+    this.resetSpinner();
     const newTask = {
       title: this.state.newTask,
       details: this.state.details
@@ -21,6 +22,12 @@ class Input extends React.Component {
     this.props.addtodo(newTask);
     this.setState({ newTask: "", details: "" });
   };
+
+  resetSpinner = () => {
+    setTimeout( () => {
+      this.setState({ spinner: false})
+    }, 1000)
+  }
 
   render() {
     let spinClass = this.state.spinner ? "spinnerShow" : "spinner";

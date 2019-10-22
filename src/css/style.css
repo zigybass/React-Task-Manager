@@ -61,11 +61,11 @@ body {
 
 .spinner-color-green {
     animation: rotate .5s ease-out infinite;
-    border-top: 14px solid #ecff1f;
+    border-top: 15px solid #ecff1f;
 }
 
 .spinner-color-grey {
-    border: 15px solid #546e7a;
+    border: 14px solid #546e7a;
 }
 
 @keyframes rotate {
