@@ -28,3 +28,37 @@ body {
     float: right;
     color: white;
 }
+
+.spinner {
+    position: relative;
+    display: flex;
+    float: right;
+    margin-right: 500px;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+}
+
+.spinner-sector {
+    border-radius: 50%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 12px solid transparent;
+}
+
+.spinner-color-green {
+    animation: rotate .35s ease-out infinite;
+    border-top: 15px solid #ecff1f;
+}
+
+.spinner-color-grey {
+    animation: rotate .4s linear infinite;
+    border: 15px solid #546e7a;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg); }
+}

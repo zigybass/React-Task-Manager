@@ -49,6 +49,7 @@ class Input extends React.Component {
             <label for="icon_prefix2">Details</label>
           </div>
           <button
+            id="createBtn"
             className="btn waves-effect lime accent-2 black-text waves-dark"
             onClick={this.onSubmit}
             type="submit"
@@ -57,6 +58,11 @@ class Input extends React.Component {
             Create
             <i className="material-icons right">send</i>
           </button>
+          <div className="spinner">
+            <div className="spinner-sector spinner-color-grey"></div>
+            <div className="spinner-sector spinner-color-green"></div>
+
+        </div>
         </div>
       </div>
     );

@@ -8,6 +8,7 @@ import TaskList from "./components/TaskList";
 import Login from "./components/pages/Login";
 import uuid from "uuid";
 import Splash from "./components/pages/Splash";
+// import Spinner from "./components/layout/Spinner";
 import "./js/code";
 
 class App extends React.Component {
@@ -16,8 +17,6 @@ class App extends React.Component {
     tasks: []
   }
 
-  componentDidMount = () => {
-  }
 
   addToDo = (task) => {
     console.log(task)
@@ -47,6 +46,7 @@ class App extends React.Component {
     <div className="container appCont">
       <h3>Welcome to Task Manager</h3>
       <Input addtodo={this.addToDo}/>
+     
       <TaskList tasks={this.state.tasks} delTask={this.delTask} />
     </div>
     </Route>
