@@ -18,7 +18,7 @@ class TaskList extends React.Component {
   }
 
   render() {
-    // console.log("Render state: " + this.state.tasks)
+    console.log("Render state: " + this.props.tasks)
     return (
       <div className="container">
         <h4 style={{ textAlign: "center" }}>Task List</h4>

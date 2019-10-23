@@ -5,11 +5,13 @@ class Deleted extends React.Component {
 
   onDelete = e => {
     e.preventDefault();
+    console.log("delete final")
     const taskId = e.target.id
     this.props.finalDel(taskId)
   }
 
   render() {
+    console.log(this.props.deleted)
   return (
     <div className="container">
         <h4 style={{ textAlign: "center" }}>Recently Deleted</h4>

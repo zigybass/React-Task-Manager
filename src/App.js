@@ -34,7 +34,7 @@ class App extends React.Component {
 
   delTask = (id) => {
     console.log("App Del ID: " + id)
-    const delArr = [...this.state.tasks.filter( task => task.key === id)]
+    const delArr = [...this.state.tasks.filter( task => task.key === id), ...this.state.deleted]
     const newArr = [...this.state.tasks.filter( task => task.key !== id)]
     this.setState({ tasks: newArr })
     this.setState({ deleted: delArr })
