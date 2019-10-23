@@ -33,11 +33,12 @@ class Input extends React.Component {
     let spinClass = this.state.spinner ? "spinnerShow" : "spinner";
     return (
       <div className="container inputCont">
+        <h4>Add New Tasks Here</h4>
         <div className="row">
           <div className="input-field col s10">
             <i className="material-icons prefix">mode_edit</i>
             <input
-              placeholder="Add New Task"
+              placeholder="New Task"
               name="newTask"
               id="newTask"
               type="text"

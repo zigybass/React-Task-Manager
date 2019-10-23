@@ -56,7 +56,6 @@ class App extends React.Component {
     <Route exact path="/" component={Splash} />
     <Route path="/tasks" >
     <div className="container appCont">
-      <h3>Welcome to Task Manager</h3>
       <Input addtodo={this.addToDo}/>
      
       <TaskList tasks={this.state.tasks} delTask={this.delTask} />
