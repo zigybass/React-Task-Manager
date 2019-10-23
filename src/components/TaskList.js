@@ -11,8 +11,10 @@ class TaskList extends React.Component {
     console.log("props: " + this.props.tasks);
   }
 
-  onDelete = id => {
-    this.props.delTask(id)
+  onDelete = e => {
+    e.preventDefault();
+    const taskId = e.target.id
+    this.props.delTask(taskId)
   }
 
   render() {
@@ -30,7 +32,7 @@ class TaskList extends React.Component {
                 header={newTask}
                 icon={
                   <i
-                    onClick={this.onDelete.bind(this, key)}
+                    onClick={this.onDelete}
                     className="material-icons btn-floating grey darken-3"
                     id={key}
                   >

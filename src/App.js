@@ -33,12 +33,10 @@ class App extends React.Component {
     this.setState({ tasks: newArr })
   }
 
-  delTask (id) {
+  delTask = (id) => {
     console.log("App Del ID: " + id)
-    this.setState({ tasks: this.state.tasks.filter( task => {
-      return task.key !== id
-    })})
-    // console.log(this.state.tasks)
+    const newArr = [...this.state.tasks.filter( task => task.key !== id)]
+    this.setState({ tasks: newArr})
   }
 
   render() {
