@@ -41,7 +41,7 @@ class TaskList extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className="container">
         <h4 style={{ textAlign: "center" }}>Task List</h4>
         <Collapsible accordion={false}>
         {this.props.tasks.map((task, i) => {
@@ -51,7 +51,7 @@ class TaskList extends React.Component {
           id={key}
           key={key}
           header={newTask} 
-          icon={<i onClick={this.props.delTask.bind(this, key)} className="material-icons" id={key}>delete_outline</i>}
+          icon={<i onClick={this.props.delTask.bind(this, key)} className="material-icons btn-floating grey darken-3" id={key}>delete_outline</i>}
         >
           {task.details}
         </CollapsibleItem>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import "./js/code";
 import "./css/style.css"
 import Header from "./components/layout/Header";
 // import Footer from "./components/layout/Footer";
@@ -8,12 +9,17 @@ import TaskList from "./components/TaskList";
 import Login from "./components/pages/Login";
 import uuid from "uuid";
 import Splash from "./components/pages/Splash";
-import "./js/code";
+import Deleted from "./components/pages/Deleted"
 
 class App extends React.Component {
 
   state = {
-    tasks: []
+    tasks: [],
+    deleted: []
+  }
+
+  componentDidUpdate () {
+    console.log(this.state.tasks)
   }
 
 
@@ -31,6 +37,7 @@ class App extends React.Component {
     console.log("del from App " + id)
     console.log(this.state.tasks)
     this.setState({ tasks: this.state.tasks.filter( task => task.key !== id)})
+    this.setState({ deleted: [...this.state.deleted]})
   }
 
   render() {
@@ -54,6 +61,9 @@ class App extends React.Component {
         <Login />
       </div>
     </Route>
+    <div className="container contApp">
+    <Route path="/deleted" deleted={this.state.deleted} component={Deleted} />
+    </div>
 
     </ Router>
     
