@@ -2,15 +2,9 @@ import React from "react";
 
 function Footer() {
   return (
-    <div>
-      <footer className="page-footer">
-        <div className="container">
-          <div className="col 16 s12">
-            <p>Footer Content</p>
-          </div>
-        </div>
+      <footer className="page-footer blue-grey darken-1">
+      <p style={{ textAlign: "center"}}>Built and maintained by Chris Zeigler</p>
       </footer>
-    </div>
   );
 }
 

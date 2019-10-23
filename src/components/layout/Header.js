@@ -11,9 +11,9 @@ function Header() {
           </div>
           <ul className="right hide-on-med-and-down topHeader">
             <li>
-              <Link to="/login" className="waves-effect lime accent-2 black-text waves-dark btn">
+              {/* <Link to="/login" className="waves-effect lime accent-2 black-text waves-dark btn">
                 Login
-              </Link>
+              </Link> */}
               <Link to="/tasks" className="waves-effect lime accent-2 black-text waves-dark btn">
                 Tasks
               </Link>

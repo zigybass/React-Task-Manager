@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./js/code";
 import "./css/style.css"
 import Header from "./components/layout/Header";
-// import Footer from "./components/layout/Footer";
+import Footer from "./components/layout/Footer";
 import Input from "./components/Input";
 import TaskList from "./components/TaskList";
 import Login from "./components/pages/Login";
@@ -71,7 +71,7 @@ class App extends React.Component {
       <Deleted deleted={this.state.deleted} finalDel={this.finalDel}/>
     </Route>
     </div>
-
+    <Footer />
     </ Router>
     
   )};
