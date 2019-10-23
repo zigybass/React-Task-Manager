@@ -14,6 +14,12 @@ function Header() {
               <Link to="/login" className="waves-effect lime accent-2 black-text waves-dark btn">
                 Login
               </Link>
+              <Link to="/tasks" className="waves-effect lime accent-2 black-text waves-dark btn">
+                Tasks
+              </Link>
+              <Link to="/deleted" className="waves-effect lime accent-2 black-text waves-dark btn">
+                Deleted Tasks
+              </Link>
             </li>
             <li>
               <i className="material-icons">more_vert</i>

@@ -35,8 +35,10 @@ class App extends React.Component {
 
   delTask = (id) => {
     console.log("App Del ID: " + id)
+    const delArr = [...this.state.tasks.filter( task => task.key === id)]
     const newArr = [...this.state.tasks.filter( task => task.key !== id)]
-    this.setState({ tasks: newArr})
+    this.setState({ tasks: newArr })
+    this.setState({ deleted: delArr })
   }
 
   render() {
@@ -61,7 +63,9 @@ class App extends React.Component {
       </div>
     </Route>
     <div className="container contApp">
-    <Route path="/deleted" deleted={this.state.deleted} component={Deleted} />
+    <Route path="/deleted">
+      <Deleted deleted={this.state.deleted} />
+    </Route>
     </div>
 
     </ Router>
