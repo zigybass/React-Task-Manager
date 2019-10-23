@@ -19,25 +19,26 @@ class App extends React.Component {
   }
 
   componentDidUpdate () {
-    console.log(this.state.tasks)
+    console.log("DidUpdate: " + JSON.stringify(this.state.tasks))
   }
 
 
   addToDo = (task) => {
-    console.log(task)
     const newTodo = {
       key: uuid.v4(),
       newTask: task.title,
       details: task.details
     }
-    this.setState({ tasks: [newTodo, ...this.state.tasks]})
+    const newArr = [newTodo, ...this.state.tasks]
+    this.setState({ tasks: newArr })
   }
 
   delTask (id) {
-    console.log("del from App " + id)
-    console.log(this.state.tasks)
-    this.setState({ tasks: this.state.tasks.filter( task => task.key !== id)})
-    this.setState({ deleted: [...this.state.deleted]})
+    console.log("App Del ID: " + id)
+    this.setState({ tasks: this.state.tasks.filter( task => {
+      return task.key !== id
+    })})
+    // console.log(this.state.tasks)
   }
 
   render() {

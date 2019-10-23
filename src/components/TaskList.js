@@ -1,62 +1,47 @@
 import React from "react";
-import { Collapsible, CollapsibleItem } from "react-materialize"
+import { Collapsible, CollapsibleItem } from "react-materialize";
 
 class TaskList extends React.Component {
 
   state = {
     tasks: []
+  };
+
+  componentDidUpdate() {
+    console.log("props: " + this.props.tasks);
   }
 
-  // updateList = () => {
-  //   return (
-  //   this.props.tasks.map((task, i) => {
-  //     const { key, newTask } = task;
-  //     return (
-  //       <CollapsibleItem
-  //         id={key}
-  //         key={key}
-  //         header={newTask} 
-  //         icon={<i onClick={this.props.delTask.bind(this, key)} className="material-icons" id={key}>delete_outline</i>}
-  //       >
-  //         {task.details}
-  //       </CollapsibleItem>
-  //     );
-  //   }))
-  // }
-
-  componentDidUpdate () {
-    if (this.props.tasks !== this.state.tasks) {
-      this.setState({ tasks: this.props.tasks})
-      console.log("state: " + this.state.tasks)
-      console.log("props: " + this.props.tasks)
-    }
+  onDelete = id => {
+    this.props.delTask(id)
   }
-
-  // onDelete = id => {
-  //   console.log("hello " + id);
-  //   console.log(this.state.tasks)
-  //   this.setState({ tasks: [...this.state.tasks.filter( task => task.key !== id)]})
-  // };
 
   render() {
-
+    // console.log("Render state: " + this.state.tasks)
     return (
       <div className="container">
         <h4 style={{ textAlign: "center" }}>Task List</h4>
         <Collapsible accordion={false}>
-        {this.props.tasks.map((task, i) => {
-      const { key, newTask } = task;
-      return (
-        <CollapsibleItem
-          id={key}
-          key={key}
-          header={newTask} 
-          icon={<i onClick={this.props.delTask.bind(this, key)} className="material-icons btn-floating grey darken-3" id={key}>delete_outline</i>}
-        >
-          {task.details}
-        </CollapsibleItem>
-      );
-    })}
+          {this.props.tasks.map((task, i) => {
+            const { key, newTask } = task;
+            return (
+              <CollapsibleItem
+                id={key}
+                key={key}
+                header={newTask}
+                icon={
+                  <i
+                    onClick={this.onDelete.bind(this, key)}
+                    className="material-icons btn-floating grey darken-3"
+                    id={key}
+                  >
+                    delete_outline
+                  </i>
+                }
+              >
+                {task.details}
+              </CollapsibleItem>
+            );
+          })}
         </Collapsible>
       </div>
     );
