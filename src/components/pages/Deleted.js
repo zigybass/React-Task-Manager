@@ -1,15 +1,20 @@
 import React from "react";
 import { Collapsible, CollapsibleItem } from "react-materialize";
 
-function Deleted(props) {
+class Deleted extends React.Component {
 
-  console.log(props)
+  onDelete = e => {
+    e.preventDefault();
+    const taskId = e.target.id
+    this.props.finalDel(taskId)
+  }
 
+  render() {
   return (
     <div className="container">
         <h4 style={{ textAlign: "center" }}>Recently Deleted</h4>
-        {/* <Collapsible accordion={false}>
-          {props.deleted.map((task, i) => {
+        <Collapsible accordion={false}>
+          {this.props.deleted.map((task, i) => {
             const { key, newTask } = task;
             return (
               <CollapsibleItem
@@ -30,9 +35,10 @@ function Deleted(props) {
               </CollapsibleItem>
             );
           })}
-        </Collapsible> */}
+        </Collapsible>
       </div>
   );
+        }
 }
 
 export default Deleted;

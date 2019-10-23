@@ -18,10 +18,9 @@ class App extends React.Component {
     deleted: []
   }
 
-  componentDidUpdate () {
-    console.log("DidUpdate: " + JSON.stringify(this.state.tasks))
-  }
-
+  // componentDidUpdate () {
+  //   console.log("DidUpdate: " + JSON.stringify(this.state.tasks))
+  // }
 
   addToDo = (task) => {
     const newTodo = {
@@ -38,6 +37,12 @@ class App extends React.Component {
     const delArr = [...this.state.tasks.filter( task => task.key === id)]
     const newArr = [...this.state.tasks.filter( task => task.key !== id)]
     this.setState({ tasks: newArr })
+    this.setState({ deleted: delArr })
+  }
+
+  finalDel = (id) => {
+    console.log(id)
+    const delArr = [...this.state.deleted.filter( task => task.key !== id)]
     this.setState({ deleted: delArr })
   }
 
@@ -64,7 +69,7 @@ class App extends React.Component {
     </Route>
     <div className="container contApp">
     <Route path="/deleted">
-      <Deleted deleted={this.state.deleted} />
+      <Deleted deleted={this.state.deleted} finalDel={this.finalDel}/>
     </Route>
     </div>
 
