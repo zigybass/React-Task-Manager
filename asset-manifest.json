@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/zigybass/React-Task-Manager/static/css/main.9d169138.chunk.css",
+    "main.js": "/zigybass/React-Task-Manager/static/js/main.8dfb2202.chunk.js",
+    "main.js.map": "/zigybass/React-Task-Manager/static/js/main.8dfb2202.chunk.js.map",
+    "runtime-main.js": "/zigybass/React-Task-Manager/static/js/runtime-main.51175332.js",
+    "runtime-main.js.map": "/zigybass/React-Task-Manager/static/js/runtime-main.51175332.js.map",
+    "static/js/2.74d72fae.chunk.js": "/zigybass/React-Task-Manager/static/js/2.74d72fae.chunk.js",
+    "static/js/2.74d72fae.chunk.js.map": "/zigybass/React-Task-Manager/static/js/2.74d72fae.chunk.js.map",
+    "index.html": "/zigybass/React-Task-Manager/index.html",
+    "precache-manifest.988adc3c44e7d1b64535213e17d156c3.js": "/zigybass/React-Task-Manager/precache-manifest.988adc3c44e7d1b64535213e17d156c3.js",
+    "service-worker.js": "/zigybass/React-Task-Manager/service-worker.js",
+    "static/css/main.9d169138.chunk.css.map": "/zigybass/React-Task-Manager/static/css/main.9d169138.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.51175332.js",
+    "static/js/2.74d72fae.chunk.js",
+    "static/css/main.9d169138.chunk.css",
+    "static/js/main.8dfb2202.chunk.js"
+  ]
+}
