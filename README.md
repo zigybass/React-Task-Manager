@@ -12,7 +12,8 @@
 * UUID NPM
 
 ### Details
-React app that lets you add and delete tasks. Deleted tasks are saved in case the user did not fully intend to delete the task. App is mobile-friendly and uses a sliding navbar for phones or iPads.
+***
+React app that lets you add and delete tasks. Deleted tasks are saved in case the User did not fully intend to delete the task. This app is mobile-friendly and uses a sliding navbar for phones or iPads. Users can enter in more details for each task. When the User clicks on the saved task, appropriate task expands out to display the details.
 <img width="1074" alt="Screen Shot 2019-10-24 at 2 36 47 PM" src="https://user-images.githubusercontent.com/50716272/67515120-0a3a3b00-f66c-11e9-9517-d6917239ea9d.png">
 
 ### Mobile Version
