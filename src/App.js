@@ -54,7 +54,7 @@ class App extends React.Component {
 
     <Header />
     <Route exact path={"/" || "/index.html"} component={Splash} />
-    <Route exact path="/index.html" component={Splash} />
+    <Route exact path="/React-Task-Manager" component={Splash} />
     <Route path="/tasks" >
     <div className="container appCont">
       <Input addtodo={this.addToDo}/>
