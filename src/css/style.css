@@ -84,4 +84,19 @@ body {
     .topHeader {
         width: 55%;
     }
+    .spinnerShow {
+        display: none;
+    }
+    .spinner {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .spinnerShow {
+        display: none;
+    }
+    .spinner {
+        display: none;
+    }
 }
