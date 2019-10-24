@@ -1,6 +1,6 @@
 # React Task Manager
 ## Mobile-Friendly
-## Built and Maintained by Chris Zeigler
+### Built and Maintained by Chris Zeigler
 
 ### Tools Used:
 
