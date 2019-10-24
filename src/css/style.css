@@ -79,3 +79,9 @@ body {
     from { transform: rotate(0deg) }
     to { transform: rotate(360deg); }
 }
+
+@media only screen and (max-width: 768px) {
+    .topHeader {
+        width: 55%;
+    }
+}

@@ -29,19 +29,27 @@ function Header() {
               </Link>
             </li>
           </ul>
-            <SideNav
-              trigger={
-                <Button className="lime accent-2 black-text">
-                  <i className="material-icons">menu</i>
-                </Button>
-              }
-              options={{ closeOnClick: true }}
-            >
-              <SideNavItem subheader>Task Manager</SideNavItem>
-              <SideNavItem divider />
-              <SideNavItem waves href="/tasks">Tasks</SideNavItem>
-              <SideNavItem waves href="/deleted">Deleted</SideNavItem>
-            </SideNav>
+          <SideNav
+            trigger={
+              <Button className="lime accent-2 black-text">
+                <i className="material-icons">menu</i>
+              </Button>
+            }
+            options={{ closeOnClick: true }}
+          >
+            <SideNavItem subheader>Task Manager</SideNavItem>
+            <SideNavItem divider />
+            <SideNavItem waves>
+              <Link to="/tasks" className="black-text">
+                Tasks
+              </Link>
+            </SideNavItem>
+            <SideNavItem waves>
+              <Link to="/deleted" className="waves-effect black-text">
+                Deleted
+              </Link>
+            </SideNavItem>
+          </SideNav>
         </div>
       </nav>
     </div>
