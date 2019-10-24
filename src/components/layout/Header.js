@@ -35,17 +35,17 @@ function Header() {
                 <i className="material-icons">menu</i>
               </Button>
             }
-            options={{ closeOnClick: true }}
+            options={{ closeOnClick: true, SideNav: "close" }}
           >
             <SideNavItem subheader>Task Manager</SideNavItem>
             <SideNavItem divider />
             <SideNavItem waves>
-              <Link to="/tasks" className="black-text">
+              <Link to="/tasks" className="black-text sidenav-close">
                 Tasks
               </Link>
             </SideNavItem>
             <SideNavItem waves>
-              <Link to="/deleted" className="waves-effect black-text">
+              <Link to="/deleted" className="waves-effect black-text sidenav-close">
                 Deleted
               </Link>
             </SideNavItem>

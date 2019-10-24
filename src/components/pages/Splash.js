@@ -9,7 +9,6 @@ const Splash = () => {
             <p style={{ textAlign: "center", fontSize: "1.5rem" }}>Click on the "Tasks" tab to get started</p>
         </div>
     )
-
 }
 
 export default Splash;
