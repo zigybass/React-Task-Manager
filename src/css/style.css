@@ -1,5 +1,6 @@
 body {
     font-family: 'Cabin', sans-serif;
+    padding-bottom: 110px;
 }
 
 .page-footer {
@@ -8,10 +9,11 @@ body {
     right: 0;
     bottom: 0;
     display: block;
+    height: 8%;
     z-index: 1;
 }
 
-.topHeader {
+.title {
     margin: 0px 40px;
 }
 
@@ -78,6 +80,7 @@ body {
 nav ul a:hover {
     background-color: rgba(0,0,0,0);
 }
+
 
 @keyframes rotate {
     from { transform: rotate(0deg) }
