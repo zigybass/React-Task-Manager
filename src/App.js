@@ -53,8 +53,8 @@ class App extends React.Component {
     <Router>
 
     <Header />
-    <Route exact path={"/" || "/index.html"} component={Splash} />
-    <Route exact path="/React-Task-Manager" component={Splash} />
+    <Route exact path={process.env.PUBLIC_URL + '/'} component={Splash} />
+    {/* <Route exact path="/React-Task-Manager" component={Splash} /> */}
     <Route path="/tasks" >
     <div className="container appCont">
       <Input addtodo={this.addToDo}/>
