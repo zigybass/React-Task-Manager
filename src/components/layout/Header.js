@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { SideNav, SideNavItem, Button } from "react-materialize";
 
 function Header() {
   return (
@@ -14,17 +15,33 @@ function Header() {
               {/* <Link to="/login" className="waves-effect lime accent-2 black-text waves-dark btn">
                 Login
               </Link> */}
-              <Link to="/tasks" className="waves-effect lime accent-2 black-text waves-dark btn">
+              <Link
+                to="/tasks"
+                className="waves-effect lime accent-2 black-text waves-dark btn"
+              >
                 Tasks
               </Link>
-              <Link to="/deleted" className="waves-effect lime accent-2 black-text waves-dark btn">
+              <Link
+                to="/deleted"
+                className="waves-effect lime accent-2 black-text waves-dark btn"
+              >
                 Deleted Tasks
               </Link>
             </li>
-            <li>
-              <i className="material-icons">more_vert</i>
-            </li>
           </ul>
+            <SideNav
+              trigger={
+                <Button className="lime accent-2 black-text">
+                  <i className="material-icons">menu</i>
+                </Button>
+              }
+              options={{ closeOnClick: true }}
+            >
+              <SideNavItem subheader>Task Manager</SideNavItem>
+              <SideNavItem divider />
+              <SideNavItem waves href="/tasks">Tasks</SideNavItem>
+              <SideNavItem waves href="/deleted">Deleted</SideNavItem>
+            </SideNav>
         </div>
       </nav>
     </div>
