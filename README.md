@@ -1,5 +1,5 @@
 # React Task Manager
-## Mobile-Friendly
+### Mobile-Friendly
 ### Built and Maintained by Chris Zeigler
 ### Try it out here: [Here](https://zigybass.github.io/React-Task-Manager/)
 
