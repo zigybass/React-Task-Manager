@@ -74,7 +74,7 @@ class Input extends React.Component {
           </button>
           <div className={spinClass}>
             <div className="spinner-sector spinner-color-grey" id={this.context}></div>
-            <div className="spinner-sector spinner-color-green"></div>
+            <div className="spinner-sector spinner-color-green" id={this.context}></div>
             <div className="spinner-sector spinner-color-shade"></div>
         </div>
         </div>

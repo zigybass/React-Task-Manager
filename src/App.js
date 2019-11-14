@@ -10,7 +10,7 @@ import Login from "./components/pages/Login";
 import uuid from "uuid";
 import Splash from "./components/pages/Splash";
 import Deleted from "./components/pages/Deleted";
-import { TaskContext } from "./Context";
+import { TaskProvider } from "./Context";
 
 class App extends React.Component {
   state = {
@@ -57,11 +57,11 @@ class App extends React.Component {
         {/* <Route exact path="/React-Task-Manager" component={Splash} /> */}
           <Route path="/tasks">
             <div className="container appCont">
-        <TaskContext.Provider value="testing twice">
+              <TaskProvider>
               <Input addtodo={this.addToDo} />
 
               <TaskList tasks={this.state.tasks} delTask={this.delTask} />
-          </TaskContext.Provider>
+              </TaskProvider>
             </div>
           </Route>
           <Route path="/login">
