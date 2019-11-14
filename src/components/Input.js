@@ -1,4 +1,5 @@
 import React from "react";  
+import { TaskContext } from "../Context";
 
 class Input extends React.Component {
   state = {
@@ -29,6 +30,8 @@ class Input extends React.Component {
     }, 500)
   }
 
+  static contextType = TaskContext;
+
   render() {
     let spinClass = this.state.spinner ? "spinnerShow" : "spinner";
     return (
@@ -38,7 +41,7 @@ class Input extends React.Component {
           <div className="input-field col s10">
             <i className="material-icons prefix">mode_edit</i>
             <input
-              placeholder="New Task"
+              placeholder="New Task Title"
               name="newTask"
               id="newTask"
               type="text"
@@ -70,7 +73,7 @@ class Input extends React.Component {
             <i className="material-icons right">send</i>
           </button>
           <div className={spinClass}>
-            <div className="spinner-sector spinner-color-grey"></div>
+            <div className="spinner-sector spinner-color-grey" id={this.context}></div>
             <div className="spinner-sector spinner-color-green"></div>
             <div className="spinner-sector spinner-color-shade"></div>
         </div>
