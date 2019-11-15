@@ -2,6 +2,10 @@ import React from "react";
 import { TaskContext } from "../Context";
 
 class Input extends React.Component {
+
+  static contextType = TaskContext;
+
+
   state = {
     newTask: "",
     details: "",
@@ -30,13 +34,12 @@ class Input extends React.Component {
     }, 500)
   }
 
-  static contextType = TaskContext;
 
   render() {
     let spinClass = this.state.spinner ? "spinnerShow" : "spinner";
     return (
       <div className="container inputCont">
-        <h4>Add New Tasks Here</h4>
+        <h4 id={this.context.fun} name={this.context.boring}>Add New Tasks Here</h4>
         <div className="row">
           <div className="input-field col s10">
             <i className="material-icons prefix">mode_edit</i>
@@ -73,8 +76,8 @@ class Input extends React.Component {
             <i className="material-icons right">send</i>
           </button>
           <div className={spinClass}>
-            <div className="spinner-sector spinner-color-grey" id={this.context}></div>
-            <div className="spinner-sector spinner-color-green" id={this.context}></div>
+            <div className="spinner-sector spinner-color-grey"></div>
+            <div className="spinner-sector spinner-color-green"></div>
             <div className="spinner-sector spinner-color-shade"></div>
         </div>
         </div>

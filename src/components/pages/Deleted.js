@@ -10,6 +10,7 @@ class Deleted extends React.Component {
     this.props.finalDel(taskId)
   }
 
+
   render() {
     console.log(this.props.deleted)
   return (
@@ -22,6 +23,7 @@ class Deleted extends React.Component {
               <CollapsibleItem
                 id={key}
                 key={key}
+                name={this.context.fun}
                 header={newTask}
                 icon={
                   <i

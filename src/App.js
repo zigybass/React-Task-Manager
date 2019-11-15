@@ -11,16 +11,14 @@ import uuid from "uuid";
 import Splash from "./components/pages/Splash";
 import Deleted from "./components/pages/Deleted";
 import { TaskProvider } from "./Context";
+import ProgressBar from "./components/pages/ProgressBar";
+import Whoops from "./components/pages/Whoops";
 
 class App extends React.Component {
   state = {
     tasks: [],
     deleted: []
   };
-  
-  // componentDidUpdate () {
-  //   console.log("DidUpdate: " + JSON.stringify(this.state.tasks))
-  // }
 
   addToDo = task => {
     const newTodo = {
@@ -53,14 +51,17 @@ class App extends React.Component {
     return (
       <Router>
         <Header />
-        <Route exact path={process.env.PUBLIC_URL + "/"} component={Splash} />
-        {/* <Route exact path="/React-Task-Manager" component={Splash} /> */}
+          <Route exact path={process.env.PUBLIC_URL + "/"} component={Splash} />
+          <TaskProvider>
+            <Route exact path="/progressbar" component={ProgressBar} />
+          </TaskProvider>
+          {/* <Route exact path="/React-Task-Manager" component={Splash} /> */}
           <Route path="/tasks">
             <div className="container appCont">
               <TaskProvider>
-              <Input addtodo={this.addToDo} />
+                <Input addtodo={this.addToDo} />
 
-              <TaskList tasks={this.state.tasks} delTask={this.delTask} />
+                <TaskList tasks={this.state.tasks} delTask={this.delTask} />
               </TaskProvider>
             </div>
           </Route>
@@ -73,7 +74,10 @@ class App extends React.Component {
             <Route path="/deleted">
               <Deleted deleted={this.state.deleted} finalDel={this.finalDel} />
             </Route>
-        </div>
+          </div>
+          <Route>
+            <Whoops />
+          </Route>
         <Footer />
       </Router>
     );
