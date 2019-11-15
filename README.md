@@ -5,12 +5,12 @@
 
 ### Tools Used:
 
-* React
+* React | React Context API
 * Node/Express
-* Materialize CSS/React-Materialize
+* Materialize CSS | React-Materialize
 * Javascript
 * React Router
-* UUID NPM
+* UUID NPM (for unique keys/ids)
 
 ### Details
 ***
