@@ -33,5 +33,6 @@ React app that lets you add and delete tasks. Deleted tasks are saved in case th
 ### Future Improvements/Additions:
 
 * Add database for persistent storage
-* Add ability to login and authentication
+* Add ability to login and user authentication
 * Add reactive calendar/alerts for tasks that have due dates/deadlines
+* Add Progress Bar to visually track progress of open tasks that need to get done
