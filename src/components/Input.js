@@ -36,6 +36,7 @@ class Input extends React.Component {
 
 
   render() {
+
     let spinClass = this.state.spinner ? "spinnerShow" : "spinner";
     return (
       <div className="container inputCont">

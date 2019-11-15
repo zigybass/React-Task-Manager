@@ -12,7 +12,7 @@ import Splash from "./components/pages/Splash";
 import Deleted from "./components/pages/Deleted";
 import { TaskProvider } from "./Context";
 import ProgressBar from "./components/pages/ProgressBar";
-import Whoops from "./components/pages/Whoops";
+// import Whoops from "./components/pages/Whoops";
 
 class App extends React.Component {
   state = {
@@ -75,9 +75,6 @@ class App extends React.Component {
               <Deleted deleted={this.state.deleted} finalDel={this.finalDel} />
             </Route>
           </div>
-          <Route>
-            <Whoops />
-          </Route>
         <Footer />
       </Router>
     );

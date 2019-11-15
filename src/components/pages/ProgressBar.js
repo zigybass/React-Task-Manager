@@ -1,17 +1,23 @@
 import React from "react";
-// import { TaskProvider } from "../../Context";
+import { TaskContext } from "../../Context";
 
 function ProgressBar(props) {
 
   return (
-
-    <div className="container">
-      <h4>Progress Bar Page</h4>
-      <br></br>
-      <div className="progress">
-        <div className="determinate" style={{"width": "70%"}}></div>
-      </div>
-    </div>
+      <TaskContext.Consumer>{(context) => {
+          return (
+            <div className="container appCont">
+            <h4>Progress Bar Page</h4>
+            <br></br>
+            <div className="progress">
+              <div className="determinate" style={context.style}></div>
+            </div>
+          </div>
+          )
+      }
+    }
+          
+      </TaskContext.Consumer>
   );
 }
 

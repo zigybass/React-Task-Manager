@@ -1,21 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 
 
 export const TaskContext = React.createContext();
 
 //React Hooks could go here. useState?
-export const TaskProvider = (props) => {
+export class TaskProvider extends React.Component {
 
-    const State = {
+    state = {
         test: "Hello",
-        style: {width: "70%"}
+        style: {width: "70%"},
+        isLightTheme: false
     }
+
+    render () {
     
     return (
-        <TaskContext.Provider value={State}>
-            {props.children}
+        <TaskContext.Provider value={{...this.state}}>
+            {this.props.children}
         </TaskContext.Provider>
     );
+    }
 }
 
 
