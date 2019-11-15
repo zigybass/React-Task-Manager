@@ -7,7 +7,8 @@ export const TaskContext = React.createContext();
 export const TaskProvider = (props) => {
 
     const State = {
-        test: "Hello"
+        test: "Hello",
+        style: {width: "70%"}
     }
     
     return (
